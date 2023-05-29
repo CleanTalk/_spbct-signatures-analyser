@@ -1,6 +1,7 @@
 {
   "name": "cleantalk/spbct-signatures-analyser",
   "description": "CleanTalk SPBCT Signatures Analyser classes",
+  "type": "cleantalk-spbct-lib",
   "authors": [
     {
       "name": "CleanTalk Team",
@@ -9,11 +10,17 @@
   ],
   "license": "GPL-3.0-or-later",
   "require": {
+    "cleantalk/spbct-installer": "*",
     "cleantalk/spbct-helpers": "*"
   },
   "autoload": {
     "psr-4": {
       "CleantalkSP\\Common\\Scanner\\SignaturesAnalyser\\": "./"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "cleantalk/spbct-installer": true
     }
   }
 }
