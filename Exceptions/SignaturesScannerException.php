@@ -1,6 +1,6 @@
 <?php
 
-namespace CleantalkSP\Common\Scanner\SignaturesAnalyser\Exceptions;
+namespace CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Exceptions;
 
 class SignaturesScannerException extends \Exception
 {

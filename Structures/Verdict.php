@@ -1,6 +1,6 @@
 <?php
 
-namespace CleantalkSP\Common\Scanner\SignaturesAnalyser\Structures;
+namespace CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Structures;
 
 class Verdict
 {

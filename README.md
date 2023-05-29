@@ -12,10 +12,10 @@ composer require cleantalk/spbct-signatures-analyser
 // Require composer autoloader
 require_once 'vendor/autoload.php';
 
-use CleantalkSP\Common\Scanner\SignaturesAnalyser\Controller;
-use CleantalkSP\Common\Scanner\SignaturesAnalyser\Structures\FileInfo;
+use CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Controller;
+use CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Structures\FileInfo;
 
-// MyModel class need to be extended \CleantalkSP\Common\Scanner\SignaturesAnalyser\Model\Model
+// MyModel class need to be extended \CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Model\Model
 $my_model = new myMoodel();
 
 // Instantiate the scanner module
