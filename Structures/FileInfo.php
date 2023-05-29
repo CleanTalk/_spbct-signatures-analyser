@@ -1,6 +1,6 @@
 <?php
 
-namespace CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Structures;
+namespace CleantalkSP\Common\Scanner\SignaturesAnalyser\Structures;
 
 class FileInfo
 {

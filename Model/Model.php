@@ -1,6 +1,6 @@
 <?php
 
-namespace CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Model;
+namespace CleantalkSP\Common\Scanner\SignaturesAnalyser\Model;
 
 abstract class Model
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser;
+namespace CleantalkSP\Common\Scanner\SignaturesAnalyser;
 
 use CleantalkSP\Common\Helpers\Arr;
 use CleantalkSP\Common\Helpers\Helper;
-use CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Structures\FileInfo;
-use CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Structures\Verdict;
-use CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Model\Model;
-use CleantalkSP\Common\Scanner\SpbctSignaturesAnalyser\Exceptions\SignaturesScannerException;
+use CleantalkSP\Common\Scanner\SignaturesAnalyser\Structures\FileInfo;
+use CleantalkSP\Common\Scanner\SignaturesAnalyser\Structures\Verdict;
+use CleantalkSP\Common\Scanner\SignaturesAnalyser\Model\Model;
+use CleantalkSP\Common\Scanner\SignaturesAnalyser\Exceptions\SignaturesScannerException;
 
 class Controller
 {

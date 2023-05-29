@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "CleantalkSP\\Common\\Scanner\\SpbctSignaturesAnalyser\\": "./"
+      "CleantalkSP\\Common\\Scanner\\SignaturesAnalyser\\": "./"
     }
   },
   "config": {
