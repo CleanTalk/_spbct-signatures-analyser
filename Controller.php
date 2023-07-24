@@ -68,6 +68,14 @@ class Controller
                 $verdict      = array();
                 $file_content = file_get_contents($root_path . $file_info->path);
 
+                //check if md5 is persists and collectable
+                if ( (empty($file_info->full_hash) || $file_info->full_hash === 'full_hash') &&
+                    function_exists('md5') &&
+                    !empty($file_content)
+                ) {
+                    $file_info->full_hash = md5($file_content);
+                }
+
                 foreach ( (array)$signatures as $signature ) {
                     if ( $signature['type'] === 'FILE' ) {
                         if ( $file_info->full_hash === $signature['body'] ) {
