@@ -73,8 +73,8 @@ class Controller
 
                 // Check if md5 is persisting and collectable
                 if ( (empty($file_info->full_hash) || $file_info->full_hash === 'full_hash') &&
-                    function_exists('md5') &&
-                    !empty($file_content)
+                     function_exists('md5') &&
+                     !empty($file_content)
                 ) {
                     $file_info->full_hash = md5($file_content);
                 }
@@ -92,15 +92,20 @@ class Controller
                         if (
                             ( $is_regexp && preg_match($signature['body'], $file_content) ) ||
                             ( ! $is_regexp &&
-                                ( strripos($file_content, stripslashes($signature['body'])) !== false ||
-                                    strripos($file_content, $signature['body']) !== false) )
+                              (
+                                  strripos($file_content, stripslashes($signature['body'])) !== false ||
+                                  strripos($file_content, $signature['body']) !== false
+                              )
+                            )
                         ) {
-                            $line_number                           = Helper::getNeedleStringNumberFromFile(
+                            $line_numbers                           = Helper::getNeedleStringsNumberFromFile(
                                 $root_path . $file_info->path,
                                 $signature['body'],
                                 $is_regexp
                             );
-                            $verdict['SIGNATURES'][$line_number][] = $signature['id'];
+                            foreach ($line_numbers as $line_number) {
+                                $verdict['SIGNATURES'][$line_number][] = $signature['id'];
+                            }
                         }
                     }
                 }
@@ -109,6 +114,7 @@ class Controller
                     $file_info->weak_spots,
                     true
                 ) : array();
+
                 if ( isset($file_info->weak_spots['SIGNATURES']) ) {
                     unset($file_info->weak_spots['SIGNATURES']);
                 }
